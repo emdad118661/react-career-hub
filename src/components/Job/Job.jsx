@@ -1,6 +1,7 @@
-
+import { MdOutlineLocationOn } from "react-icons/md";
+import { AiOutlineDollar } from "react-icons/ai";
 const Job = ({ job }) => {
-    const { logo , job_title, company_name, remote_or_onsite, job_type, location, salary} = job;
+    const { logo, job_title, company_name, remote_or_onsite, job_type, location, salary } = job;
     return (
         <div className="border border-gray-300 rounded-xl card card-compact bg-base-100">
             <figure className="mt-4"><img src={logo} width="117px" height="40px" alt="Shoes" /></figure>
@@ -12,7 +13,9 @@ const Job = ({ job }) => {
                     <button className="px-5 py-2 font-extrabold border rounded border-[#7E90FE] mr-2 text-[#7E90FE]">{job_type}</button>
                 </div>
                 <div className="flex text-[#757575]">
+                    <MdOutlineLocationOn className="mt-1 mr-2" />
                     <p>{location}</p>
+                    <AiOutlineDollar className="mt-1 mr-2" />
                     <p>{salary}</p>
                 </div>
                 <div className="card-actions">

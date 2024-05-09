@@ -4,6 +4,7 @@ import { data } from "autoprefixer";
 
 const FeaturedJobs = () => {
     const [jobs, setJobs] = useState([]);
+    const [dataLength, setDataLength] = useState(4);
 
     useEffect(()=>{
         fetch('jobs.json')
@@ -19,8 +20,11 @@ const FeaturedJobs = () => {
             <br />
             <div className="grid grid-cols-2 gap-6">
                 {
-                    jobs.map(job =><Job key={job.id} job={job}></Job>)
+                    jobs.slice(0,dataLength).map(job =><Job key={job.id} job={job}></Job>)
                 }
+            </div>
+            <div className={dataLength === jobs.length ? "hidden" : "text-center"}>
+                <button onClick={()=>setDataLength(jobs.length)} className="btn bg-[#7E90FE]">See all jobs</button>
             </div>
         </div>
     );
