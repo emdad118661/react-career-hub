@@ -26,7 +26,7 @@ const JobDetails = () => {
                     <br />
                 </div>
                 <div>
-                    <div className="w-full mb-2 border border-gray-300 card bg-violet-100">
+                    <div className="w-full mb-2 card bg-violet-100">
                         <div className="card-body">
                             <h2 className="font-bold">Job Details</h2>
                             <hr/>
@@ -39,7 +39,7 @@ const JobDetails = () => {
                             <p><b>Address: </b>{job.contact_information.address}</p>
                         </div>
                     </div>
-                    <button className="w-full btn btn-primary">Apply Now</button>
+                    <button className="w-full btn bg-[#7E90FE] text-white">Apply Now</button>
                 </div>
             </div>
 
